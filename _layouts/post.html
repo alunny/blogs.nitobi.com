@@ -88,16 +88,11 @@
 			  {{ content }}
 			</div>
       
-      <!-- TODO: fix meta -->
-			<p class="meta">
-				Posted in <a href="/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, 
-				<a href="/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a>
-			</p>
-
 		</div>
-		
-		<!-- xTODO: post details -->
-		<p class="post-details">This entry was posted on {{ page.date | date: "%A, %B %d, %Y" }} and is filed under <a href="/andrew/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, <a href="/andrew/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a>.</p>
+		<p class="post-details">This entry is filed under {% for cat in page.categories %}
+		  <a href="/andrew/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>, 
+		  {% endfor %} and was posted on {{ page.date | date: "%A, %B %d, %Y" }}.
+		  </p>
 
 		</div>
 	
