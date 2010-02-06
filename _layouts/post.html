@@ -9,8 +9,8 @@
   	<link rel="stylesheet" type="text/css" href="http://www.nitobi.com/css/dev.css" media="screen" />
   	<link rel="stylesheet" type="text/css" href="http://blogs.nitobi.com/assets/sh.css" media="screen" />
 
-    <link rel='index' title='Andrew Lunny&#039;s Blog @ Nitobi' href='http://blogs.nitobi.com/andrew' />
-    <link rel="alternate" type="application/rss+xml" title="Andrew Lunny&#039;s Blog @ Nitobi RSS Feed" href="http://blogs.nitobi.com/andrew/feed/" />
+    <link rel='index' title='Andrew Lunny&#039;s Blog @ Nitobi' href='/andrew' />
+    <link rel="alternate" type="application/rss+xml" title="Andrew Lunny&#039;s Blog @ Nitobi RSS Feed" href="/andrew/feed/" />
   
     <!-- TODO: start and next-->
     <!-- <link rel='start' title='{{ page.title }}' href='http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/' />
@@ -76,15 +76,15 @@
 		<div class="col1 main">
 
 			<div id="blog-header">
-				<a href="http://blogs.nitobi.com/andrew">
+				<a href="/andrew">
 				  <h2 id="hd-blogs-al" class="img-header">Andrew Lunny&#8217;s Blog</h2></a>
-				<a href="http://blogs.nitobi.com/andrew/feed" class="rss" id="rss-al">RSS</a>
+				<a href="/andrew/feed" class="rss" id="rss-al">RSS</a>
 			</div>
   
 		<div class="navigation">
 			<div class="alignleft"></div>
-			<!-- TODO: post navigation -->
-			<div class="alignright"><a href="http://blogs.nitobi.com/andrew/2010/01/30/phonegap-blackberry-on-os-x/">PhoneGap Blackberry on OS X</a> &raquo;</div>
+			<!-- xTODO: post navigation -->
+			<div class="alignright"><a href="/andrew/2010/01/30/phonegap-blackberry-on-os-x/">PhoneGap Blackberry on OS X</a> &raquo;</div>
 		</div>
 
 		<div class="post" id="post-3">
@@ -93,16 +93,17 @@
 			<div class="entry">
 			  {{ content }}
 			</div>
-
+      
+      <!-- TODO: fix meta -->
 			<p class="meta">
-				Posted in <a href="http://blogs.nitobi.com/andrew/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, 
-				<a href="http://blogs.nitobi.com/andrew/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a> <span class="sep">|</span> 
-				<a href="http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/#respond" title="Comment on PhoneGap-iPhone-JavaScript Gotcha #1: JSON">No Comments &#187;</a> <span class="sep">|</span> <a href="http://del.icio.us/post?url=http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/&title=PhoneGap-iPhone-JavaScript Gotcha #1: JSON" target="_blank">Add to Delicious</a> <span class="sep">|</span> <a href="href="http://digg.com/submit?phase=2&url=http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/&title=PhoneGap-iPhone-JavaScript Gotcha #1: JSON&bodytext=PhoneGap-iPhone-JavaScript Gotcha #1: JSON&topic=Programming" target="_blank"">Digg It</a> 
+				Posted in <a href="/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, 
+				<a href="/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a>
 			</p>
 
 		</div>
 		
-		<p class="post-details">This entry was posted on {{ page.date | date: "%A, %B %d, %Y" }} and is filed under <a href="http://blogs.nitobi.com/andrew/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, <a href="http://blogs.nitobi.com/andrew/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a>.</p>
+		<!-- xTODO: post details -->
+		<p class="post-details">This entry was posted on {{ page.date | date: "%A, %B %d, %Y" }} and is filed under <a href="/andrew/category/javascript/" title="View all posts in javascript" rel="category tag">javascript</a>, <a href="/andrew/category/phonegap/" title="View all posts in phonegap" rel="category tag">phonegap</a>.</p>
 
 		</div>
 	
@@ -115,26 +116,21 @@
 
 			<h3>Pages</h3>
 			<ul>
-			  <!-- TODO:  list pages -->
+			  <!-- xTODO:  list pages -->
 			  <li class="page_item page-item-2"><a href="http://blogs.nitobi.com/andrew/about/" title="About">About</a></li>
 			</ul>
 			<h3>Archives</h3>
 				<ul class="tertiary-nav">
-				  <!-- TODO:  list archives -->
+				  <!-- xTODO:  list archives -->
 					<li><a href='http://blogs.nitobi.com/andrew/2010/01/' title='January 2010'>January 2010</a></li>
           <li><a href='http://blogs.nitobi.com/andrew/2009/07/' title='July 2009'>July 2009</a></li>
 				</ul>
 
 			<h3>Categories</h3>
-			  <!-- TODO:  list categories -->
 				<ul class="tertiary-nav">
-					<li class="cat-item cat-item-7"><a href="http://blogs.nitobi.com/andrew/category/blackberry/" title="View all posts filed under blackberry">blackberry</a> (1)
-</li>
-
-	<li class="cat-item cat-item-3"><a href="http://blogs.nitobi.com/andrew/category/javascript/" title="View all posts filed under javascript">javascript</a> (1)
-</li>
-	<li class="cat-item cat-item-6"><a href="http://blogs.nitobi.com/andrew/category/phonegap/" title="View all posts filed under phonegap">phonegap</a> (2)
-</li>
+				  {% for category in site.categories %}
+				    <li class="cat-item"><a href="/andrew/category/{{ category | first }}">{{ category | first }}</a> ({{ category | last | size }})</li>
+          {% endfor %}
 				</ul>
       </div>
 	</div>
