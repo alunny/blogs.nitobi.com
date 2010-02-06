@@ -17,7 +17,7 @@ If you want to run PhoneGap-BlackBerry in this environment, it’s trivially eas
 6. Open `build.xml` for editing. Change the `jde.home` and `simulator.home` properties to match your simulator location (if you follow Aziz’s tutorial, you can copy these properties from the `build.xml` of that project). Edit the `load-simulator` tag (`<target name="load-simulator">`) to match the other `build.xml` file also
 7. Drag `build.xml` into the app view (as detailed in Aziz’s tutorial). Then double-click on load-simulator
 8. Hit Menu (next to the green button), then Downloads, then PhoneGap
-9. ??????????
+9. Hrrm... ??????????
 10. Profit!
 
 Thanks to Aziz for writing such a great tutorial – now we just need someone to get XCode running on Windows 7!
