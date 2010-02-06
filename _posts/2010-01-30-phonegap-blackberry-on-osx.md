@@ -28,3 +28,4 @@ Thanks to Aziz for writing such a great tutorial – now we just need someone to
 [fils-tweet]: http://twitter.com "@filmaj"
 [tutorial]: http://www.azizuysal.com/2009/07/blackberry-development-on-mac-os-x.html "BlackBerry Development on OS X"
 [repo]: http://github.com/phonegap/phonegap-blackberry "PhoneGap BlackBerry Repo"
+[mailing-list]: http://groups.google.com/group/phonegap/browse_thread/thread/ebd3681c8eefba3d/eb29373d7606be8f?lnk=gst&q=blackberry+os+x
