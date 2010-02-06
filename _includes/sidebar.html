@@ -1,0 +1,14 @@
+<div class="col2">
+	<h3>Pages</h3>
+	<ul>
+	  <!-- xTODO:  list pages -->
+	  <li class="page_item page-item-2"><a href="http://blogs.nitobi.com/andrew/about/" title="About">About</a></li>
+	</ul>
+
+	<h3>Categories</h3>
+		<ul class="tertiary-nav">
+		  {% for category in site.categories %}
+		    <li class="cat-item"><a href="/andrew/category/{{ category | first }}">{{ category | first }}</a> ({{ category | last | size }})</li>
+      {% endfor %}
+		</ul>
+</div>
