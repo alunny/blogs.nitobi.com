@@ -49,21 +49,21 @@ Since this data is coming remotely, though, we can’t just stick our variable d
    var load_tweets = function(container_id,user,passw) {  
        x$("#login_screen").setStyle("display","none");  
        x$(container_id).xhr("http://www.twitter.com/statuses/friends_timeline.json",  
-                            { callback: function () { render_tweets(container_id, this.responseText); },  
-               headers: [{name:"Authorization",  
-                           value: "Basic " + btoa(user + ":" + passw)}]  
-           });  
+           { callback: function () { render_tweets(container_id, this.responseText); },  
+           headers: [{name:"Authorization",  
+                  value: "Basic " + btoa(user + ":" + passw)}]  
+       });  
    }  
    var render_tweets = function(container_id, new_tweets) {  
       var tweetstream = eval(new_tweets);  
       var i=0;  
       for (i=0; i<tweetstream.length; i++)="" {="">  
           x$(container_id).html("bottom",  
-                                format_tweet({  
-                                             profile_image:tweetstream[i].user.profile_image_url,  
-                                             user_name:tweetstream[i].user.name,  
-                                             tweet_text:tweetstream[i].text  
-                                             }));  
+              format_tweet({  
+                  profile_image:tweetstream[i].user.profile_image_url,  
+                  user_name:tweetstream[i].user.name,  
+                  tweet_text:tweetstream[i].text  
+              }));  
       }  
   }
 {% endhighlight %}
