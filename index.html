@@ -10,7 +10,7 @@ title: Home
 		  {{ post.content }}
 		</div>
 		<p class="meta">Posted in {% for cat in post.categories %}
-		  <a href="{{ site_root }}/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>{% unless forloop.last %},{% endunless %} 
+		  <a href="{{ site.site_root }}/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>{% unless forloop.last %},{% endunless %} 
 		  {% endfor %}
 	</div>
 {% endfor %}
