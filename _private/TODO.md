@@ -1,4 +1,4 @@
-* get full text feed
-* get category feeds
 * get category pages
+
+* get category feeds
 * get pagination working
