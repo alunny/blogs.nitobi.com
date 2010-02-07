@@ -5,7 +5,7 @@ title: Home
 
 {% for post in site.posts %}
 	<div class="post" id="post-3">
-			<h3><a href="{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a> <span class="date"><span class="sep">|</span> {{ post.date | date: "%B %d, %Y" }}</span></h3>
+			<h3><a href="{{ site.root }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a> <span class="date"><span class="sep">|</span> {{ post.date | date: "%B %d, %Y" }}</span></h3>
 		<div class="entry">
 		  {{ post.content }}
 		</div>
