@@ -24,8 +24,8 @@ Thanks to Aziz for writing such a great tutorial – now we just need someone to
 
 **Edit**: This tutorial was [previous referenced][mailing-list] on the PhoneGap mailing list by John Britton – I wasn’t aware until he brought it up in a later message. Thanks for bringing this to our attention John.
 
-[simulator-image]: /images/phonegap-blackberry-osx.png "BlackBerry Simulator, running in Wine"
 [fils-tweet]: http://twitter.com "@filmaj"
 [tutorial]: http://www.azizuysal.com/2009/07/blackberry-development-on-mac-os-x.html "BlackBerry Development on OS X"
 [repo]: http://github.com/phonegap/phonegap-blackberry "PhoneGap BlackBerry Repo"
 [mailing-list]: http://groups.google.com/group/phonegap/browse_thread/thread/ebd3681c8eefba3d/eb29373d7606be8f?lnk=gst&q=blackberry+os+x
+[simulator-image]: {{ site.images_dir }}/phonegap-blackberry-osx.png "BlackBerry Simulator, running in Wine"

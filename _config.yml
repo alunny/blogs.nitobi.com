@@ -1,3 +1,4 @@
 auto: true
 paginate: 5
 permalink: /:year/:month/:day/:title
+images_dir: "/images"
