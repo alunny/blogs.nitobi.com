@@ -4,18 +4,18 @@
 	<div class="grid-6x2">
 		<div class="col1 main">
 			<div id="blog-header">
-				<a href="/andrew">
-				  <h2 id="hd-blogs-al" class="img-header">Andrew Lunny&#8217;s Blog</h2></a>
-				<a href="/andrew/feed" class="rss" id="rss-al">RSS</a>
+				<a href="{{ site.site_root }}">
+				  <h2 id="hd-blogs-al" class="img-header">{{ site.title }}</h2></a>
+				<a href="{{ site.site_root }}/feed" class="rss" id="rss-al">RSS</a>
 			</div>
   		<div class="post" id="post-3">
-  				<h3><a href="{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a> <span class="date"><span class="sep">|</span> {{ page.date | date: "%B %d, %Y" }}</span></h3>
+  				<h3><a href="{{ site.site_root }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a> <span class="date"><span class="sep">|</span> {{ page.date | date: "%B %d, %Y" }}</span></h3>
   			<div class="entry">
   			  {{ content }}
   			</div>
   		</div>
   		<p class="post-details">This entry is filed under {% for cat in page.categories %}
-  		  <a href="/andrew/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>, 
+  		  <a href="{{ site.site_root }}/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>, 
   		  {% endfor %} and was posted on {{ page.date | date: "%A, %B %d, %Y" }}.
   		</p>
 		</div>
