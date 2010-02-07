@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>{{ site.title }}</title>
+	<atom:link href="{{ site.site_url }}/feed/" rel="self" type="application/rss+xml" />
+	<link>{{ site.site_url }}</link>
+	<description>{{ site.description }}</description>
+	<lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+	<generator>http://github.com/mojombo/jekyll</generator>
+	<language>en</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	
+	
+	<item>
+		<title>PhoneGap Blackberry on OS X</title>
+		<link>http://blogs.nitobi.com/andrew/2010/01/30/phonegap-blackberry-on-os-x/</link>
+		<comments>http://blogs.nitobi.com/andrew/2010/01/30/phonegap-blackberry-on-os-x/#comments</comments>
+		<pubDate>Sat, 30 Jan 2010 00:09:42 +0000</pubDate>
+		<dc:creator>{{ site.author }}</dc:creator>
+		<category><![CDATA[blackberry]]></category>
+		<category><![CDATA[phonegap]]></category>
+
+		<guid isPermaLink="false">http://blogs.nitobi.com/andrew/?p=25</guid>
+		<description><![CDATA[
+Nitobi/PhoneGap dev Fil Maj tweeted the other day about this excellent tutorial from Aziz Uysal, describing how to get the BlackBerry SDK and simulator up and running on OS X, for which it has no official support. Using some Eclipse skills and Wine magic, you can pull up the simulator and enjoy all the benefits [...]]]>
+		</description>
+			<content:encoded><![CDATA[<p><img src="http://blogs.nitobi.com/andrew/wp-content/uploads/2010/01/phonegap-blackberry-osx.png" alt="phonegap-blackberry-osx" title="phonegap-blackberry-osx" width="600" height="712" class="alignnone size-full wp-image-26" /></p>
+<p>Nitobi/PhoneGap dev Fil Maj <a href="http://twitter.com/filmaj/status/7994330504">tweeted</a> the other day about <a href="http://www.azizuysal.com/2009/07/blackberry-development-on-mac-os-x.html">this excellent tutorial from Aziz Uysal</a>, describing how to get the BlackBerry SDK and simulator up and running on OS X, for which it has no official support. Using some Eclipse skills and Wine magic, you can pull up the simulator and enjoy all the benefits of BlackBerry dev without booting up a VM.</p>
+<p>If you want to run PhoneGap-BlackBerry in this environment, it&#8217;s trivially easy. Here&#8217;s how:</p>
+<ol>
+<li>Do everything it says in the tutorial, until you can run a Hello World app in the simulator</li>
+<li>Clone the <a href="http://github.com/phonegap/phonegap-blackberry">PhoneGap-Blackberry</a> repo</li>
+<li>File -> Import&#8230; -> General, Existing Projects into Workspace, then Next</li>
+<li>Under <i>Select root directory</i>, select <i>/whatever_your_path_is/phonegap-blackberry/framework/ and then select PhoneGap in the Projects field below</i></li>
+<li>Add an index.html file to the <i>src/www</i> directory.</li>
+<li>Open build.xml for editing. Change the jde.home and simulator.home properties to match your simluator location (if you follow Aziz&#8217;s tutorial, you can copy these properties from the build.xml of that project). Edit the load-simulator tag (&lt;target name=&#8221;load-simulator&#8221;&gt;) to match the other build.xml file also</li>
+<li>Drag build.xml into the app view (as detailed in Aziz&#8217;s tutorial). Then double-click on load-simulator</li>
+<li>Hit Menu (next to the green button), then Downloads, then PhoneGap</li>
+<li>??????????</li>
+<li>Profit!</li>
+</ol>
+<p>Thanks to Aziz for writing such a great tutorial &#8211; now we just need someone to get XCode running on Windows 7!</p>
+<p><b>Edit</b>: This tutorial was <a href="http://groups.google.com/group/phonegap/browse_thread/thread/ebd3681c8eefba3d/eb29373d7606be8f?lnk=gst&#038;q=blackberry+os+x">previous referenced</a> on the PhoneGap mailing list by John Britton &#8211; I wasn&#8217;t aware until he brought it up in a later message. Thanks for bringing this to our attention John.</p>
+]]></content:encoded>
+
+		</item>
+
+		<item>
+		<title>PhoneGap-iPhone-JavaScript Gotcha #1: JSON</title>
+		<link>http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/</link>
+		<comments>http://blogs.nitobi.com/andrew/2009/07/28/phonegap-iphone-javascript-gotcha-1-json/#comments</comments>
+		<pubDate>Tue, 28 Jul 2009 15:48:15 +0000</pubDate>
+		<dc:creator>{{ site.author }}</dc:creator>
+				<category><![CDATA[javascript]]></category>
+		<category><![CDATA[phonegap]]></category>
+		<category><![CDATA[iphone]]></category>
+		<category><![CDATA[json]]></category>
+
+		<guid isPermaLink="false">http://blogs.nitobi.com/andrew/?p=3</guid>
+		<description><![CDATA[We&#8217;ve recently started doing training for PhoneGap, our open-source mobile web development that&#8217;s taking the world by storm. In preparation for the training, I threw together a little Twitter client app called Pigeon (the code is available on GitHub) &#8211; it&#8217;s currently iPhone only but will be ported everywhere else in the near future.
+PhoneGap is [...]]]></description>
+			<content:encoded><![CDATA[<p>We&#8217;ve recently started doing training for <a href="http://www.phonegap.com">PhoneGap</a>, our open-source mobile web development that&#8217;s taking the world by storm. In preparation for the training, I threw together a little Twitter client app called Pigeon (the code is <a href="http://github.com/alunny/Pigeon">available on GitHub</a>) &#8211; it&#8217;s currently iPhone only but will be ported everywhere else in the near future.</p>
+<p>PhoneGap is a great abstraction for working with different devices with a minimum of effort, but you can&#8217;t completely avoid the particularities of specific devices. I&#8217;m gonna detail some of those quirks on this blog, so users of Google can avoid my mistake. The first comes from evaluating JSON.</p>
+<p><span id="more-3"></span></p>
+<h3>Gotcha #1: Evaluating JSON</h3>
+<p>One of the great things about PhoneGap is that you can interact with remote web services through XmlHttpRequests. Unlike XHRs in a browser, which require the same origin server (an XHR from nitobi.com can&#8217;t access apple.com), XHRs in a native app can go wherever they please (you can also use this functionality in Safari on the desktop, if you&#8217;re running JavaScript from the file system). This is great for interacting with web services &#8211; and Pigeon, a Twitter app, is a perfect example of this.</p>
+<p>Twitter has a <a href="http://apiwiki.twitter.com/">terrific API</a> that lets you access huge amounts of data in a variety of formats. For JavaScript code, JSON is the most useful &#8211; rather than writing any complicated parsing code, you can just evaluate the response and access it as a JavaScript object. Here is the <a href="http://twitter.com/statuses/public_timeline.json">public timeline in JSON</a>.</p>
+<p>Twitter returns two different kinds of JSON responses: objects and arrays of objects. For example, here&#8217;s the JSON representation of <a href="http://twitter.com/phonegap/status/2782434499">this tweet</a>:</p>
+<p><code class="js">{"truncated":false,"text":"mobile orchard interviews founders of phonegap @rob_ellis and @sintaxi http:\/\/bit.ly\/E0ZOG", "user":{"following":true,"description":"","screen_name":"phonegap","utc_offset":-28800, "favourites_count":1,"profile_text_color":"323232","statuses_count":248, "profile_background_image_url":"http:\/\/static.twitter.com\/images\/themes\/theme1\/bg.gif", "notifications":false,"profile_link_color":"224467","profile_background_tile":false, "created_at":"Sun Aug 03 23:58:00 +0000 2008", "url":"http:\/\/phonegap.com","name":"phonegap","profile_background_color":"CDCDCD", "protected":false,"verified":false,"profile_sidebar_fill_color":"FFFFFF", "time_zone":"Pacific Time (US &amp; Canada)","followers_count":1852, "profile_sidebar_border_color":"FFFFFF", "profile_image_url":"http:\/\/s3.amazonaws.com\/twitter_production\/profile_images\/ 61102217\/icon_iphone_wo_glare_normal.png", "location":"Vancouver BC","id":15715860,"friends_count":13},"in_reply_to_status_id":null, "in_reply_to_user_id":null,"created_at":"Wed Jul 22 18:24:10 +0000 2009", "favorited":false,"in_reply_to_screen_name":null,"id":2782434499,"source":"<\a href="\">Tweetie&lt;\/a&gt;"}</a></code></p>
+<p>If you copy that code into a script tag and place &#8220;var foo = &#8221; before it, then foo is a JS object representing that Tweet. If you request multiple tweets from Twitter&#8217;s API, such as that public timeline linked above, you get multiple objects like this in an array. Here&#8217;s a truncated version of what that would look like:</p>
+<p><code class="js">[{"tweet":"first"},{"tweet","second"},{"tweet","third"}]</code></p>
+<p>Place &#8220;var bar = &#8221; before that in your script tag, and bar is have an array of three tweets. So far so good, no?</p>
+<p>Since this data is coming remotely, though, we can&#8217;t just stick our variable declarations in and run (well, you could, but it would kinda be a waste of time). So instead, we perform our XHR to get the data from Twitter, and then on completion we use the magic eval (sounds like &#8220;evil&#8221;) JS function to turn the response into a JavaScript object. Here&#8217;s some relevant code from Pigeon that gets all of your friends&#8217; tweets, turns them into a JS array, and puts them onto the screen:</p>
+<p><code class="js">var load_tweets = function(container_id,user,passw) {<br />
+	x$("#login_screen").setStyle("display","none");<br />
+	x$(container_id).xhr("http://www.twitter.com/statuses/friends_timeline.json",<br />
+						 { callback: function () { render_tweets(container_id, this.responseText); },<br />
+			headers: [{name:"Authorization",<br />
+						value: "Basic " + btoa(user + ":" + passw)}]<br />
+		});<br />
+}<br />
+var render_tweets = function(container_id, new_tweets) {<br />
+	var tweetstream = eval(new_tweets);<br />
+	var i=0;<br />
+	for (i=0; i<tweetstream.length; i++) {<br />
+		x$(container_id).html("bottom",<br />
+							  format_tweet({<br />
+										   profile_image:tweetstream[i].user.profile_image_url,<br />
+										   user_name:tweetstream[i].user.name,<br />
+										   tweet_text:tweetstream[i].text<br />
+										   }));<br />
+	}<br />
+}</code></p>
+<p>The load_tweets function calls XUI's xhr function, which on its callback calls the render_tweets function, passing it the magic "this.responseText" string, which is the response from the Twitter API. The render_tweets function passes the response to eval(), which spits back an array that's looped through, outputing nicely formatted tweets to the container div.</p>
+<p>So far so good, no? This works fine when Twitter is sending back an array, but fails, silently, when we receive a curly-braced object. Thankfully, it fails in Safari on your desktop too, where you can get a useful error message:</p>
+<p><code class="js">var foo = eval("{'car':'dog','boat':'fish'}")<br />
+  <span style="color: red">SyntaxError: Parse error</span><br />
+var foo = eval("[{'car':'dog','boat':'fish'}]")<br />
+  undefined</code></p>
+<p>Turns out, eval() works for arrays but nor for objects. The vagaries of the eval() implementation are beyond the scope of this already exhausting post: the behaviour is counter-intuitive, but is present everywhere I've tested it (Safari, Firefox, IE).</p>
+<p>A thoughtful, conscientious developer will tell you not to use eval(), to instead download or implement a JSON parser that will avoid this hassle altogether, and use that instead of eval(). A lazy developer, who is more worried about the size of his code than performance and is getting data from a very trusted source, will use the immediate workaround:</p>
+<p><code class="js">tweet_response = eval("[" + new_tweet + "]")[0];</code></p>
+<p>... which does the job with only 15 extra characters - you could do it nine times in a tweet and still have space to say bye.</p>
+<p>Next time: avoiding stack overflows when your callbacks' callbacks aren't calling their callbacks.</p>
+]]></content:encoded>
+					</item>
+	</channel>
+</rss>
