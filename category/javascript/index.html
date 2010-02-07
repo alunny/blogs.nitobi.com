@@ -1,0 +1,17 @@
+---
+layout: cat_index
+title: Javascript Category
+category_name: javascript
+---
+
+{% for post in site.categories.javascript %}
+	<div class="post">
+			<h3><a href="{{ site.site_root }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">{{ post.title }}</a> <span class="date"><span class="sep">|</span> {{ post.date | date: "%B %d, %Y" }}</span></h3>
+		<div class="entry">
+		  {{ post.content }}
+		</div>
+		<p class="meta">Posted in {% for cat in post.categories %}
+		  <a href="{{ site.site_root }}/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>{% unless forloop.last %},{% endunless %} 
+		  {% endfor %}
+	</div>
+{% endfor %}
