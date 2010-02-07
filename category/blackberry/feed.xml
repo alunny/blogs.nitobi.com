@@ -1,8 +1,9 @@
 ---
-title: Andrew Lunny's Blog @ Nitobi
+title: Blackberry posts @ Andrew Lunny's Blog @ Nitobi
 layout: feed
+subfeed: /category/blackberry
 ---
-	{% for item in site.posts %}
+	{% for item in site.categories.blackberry %}
 	<item>
 		<title>{{ item.title }}</title>
 		<link>{{ site.root }}{{ item.url }}</link>
