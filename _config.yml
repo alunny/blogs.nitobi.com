@@ -1,4 +1,8 @@
 auto: true
-paginate: 5
+paginate: 10
 permalink: /:year/:month/:day/:title
-images_dir: "/images"
+images_dir: /images
+site_root: http://blogs.nitobi.com/andrew
+title: Andrew Lunny Blog @ Nitobi
+description: I just work here
+author: alunny
