@@ -1,8 +1,0 @@
-auto: true
-paginate: 10
-permalink: /:year/:month/:day/:title
-images_dir: /images
-site_root: http://localhost:4000
-title: Andrew Lunny Blog @ Nitobi
-description: I just work here
-author: alunny
