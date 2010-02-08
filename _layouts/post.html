@@ -14,13 +14,21 @@
   			  {{ content }}
   			</div>
   		</div>
+			
+			{% include disqus.html %}
+
   		<p class="post-details">This entry is filed under {% for cat in page.categories %}
   		  <a href="{{ site.site_root }}/category/{{ cat }}" title="View all posts in {{ cat }}">{{ cat }}</a>, 
   		  {% endfor %} and was posted on {{ page.date | date: "%A, %B %d, %Y" }}.
   		</p>
+				
 		</div>
+
+
 	
 	<hr class="hide /">
+	
+
 
 {% include sidebar.html %}
     
