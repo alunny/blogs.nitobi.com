@@ -6,7 +6,7 @@ subfeed: /category/<%= @catname %>
 	{% for item in site.categories.<%= @catname %> %}
 	<item>
 		<title>{{ item.title }}</title>
-		<link>{{ site.root }}{{ item.url }}</link>
+		<link>{{ site.site_root }}{{ item.url }}</link>
 		<pubDate>{{ item.date | date_to_xmlschema }}</pubDate>
 		<dc:creator>{{ site.author }}</dc:creator>
 		{% for cat in item.categories %}
