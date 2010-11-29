@@ -1,0 +1,21 @@
+---
+title: Nodejs posts @ Andrew Lunny's Blog @ Nitobi
+layout: feed
+subfeed: /category/nodejs
+---
+	{% for item in site.categories.nodejs %}
+	<item>
+		<title>{{ item.title }}</title>
+		<link>{{ site.site_root }}{{ item.url }}</link>
+		<pubDate>{{ item.date | date_to_xmlschema }}</pubDate>
+		<dc:creator>{{ site.author }}</dc:creator>
+		{% for cat in item.categories %}
+		<category><![CDATA[{{ cat }}]]></category>
+		{% endfor %}
+		<guid isPermaLink="false">{{ item.id }}</guid>
+		<description><![CDATA[ {{ item.content | truncatewords 50 }} [...]]]>
+		</description>
+			<content:encoded><![CDATA[{{ item.content }}
+]]></content:encoded>
+		</item>
+	{% endfor %}
