@@ -27,7 +27,7 @@ class Blog < Thor
     template_file = '_meta/_posts/new_post.md'
     basename = Date.today.to_s + "-#{ args.join('-') }"
     
-    output_file = template_file.sub('new_post', basename)
+    output_file = template_file.sub('_meta','').sub('new_post', basename)
     title = args.map {|e| e.capitalize}.join(' ')
     result = string_from_template(template_file, :title=>title)
     output_file = create_output_file(output_file, result)
