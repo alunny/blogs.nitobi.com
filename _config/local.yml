@@ -8,3 +8,5 @@ description: I just work here
 author: alunny
 exclude:
     -Thorfile
+    -Gemfile
+    -Gemfile.lock

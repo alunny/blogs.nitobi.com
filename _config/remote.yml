@@ -9,3 +9,5 @@ author: alunny
 destination: /var/www/blogs.nitobi.com/andrew
 exclude:
     -Thorfile
+    -Gemfile
+    -Gemfile.lock
