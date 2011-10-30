@@ -3,7 +3,7 @@ layout: post
 title: "Phonegap: Beginner's Guide"
 categories: [phonegap, book]
 ---
-![PhoneGap Beginner's Guide][book-cover]
+[![PhoneGap Beginner's Guide][book-cover]][packt-link]
 
 This past month my book on PhoneGap, [_PhoneGap: Beginner's Guide_][amazon-link], or _PGBG_, was published by Packt Publishing.
 
@@ -11,5 +11,6 @@ _PGBG_ helps developers new to PhoneGap get up to speed with writing PhoneGap ap
 
 Stay tuned to this blog and [my twitter account](http://twitter.com/alunny) for more updates - I'm hoping to get a dedicated site for the book up soon, with references for each chapters and notes on any changes to the PhoneGap APIs since publication.
 
+[packt-link]: http://www.packtpub.com/phonegap-beginners-guide/book
 [amazon-link]: http://www.amazon.com/PhoneGap-Beginners-Guide-Andrew-Lunny/dp/1849515360 "PhoneGap: Beginner's Guide on Amazon"
 [book-cover]: {{ site.site_root }}{{ site.images_dir }}/pgbg_cover.jpg "PhoneGap: Beginner's Guide"
